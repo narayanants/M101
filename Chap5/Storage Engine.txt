@@ -1,0 +1,125 @@
+Indexex and Monitoring:
+=======================
+
+Storage Engine => Interface b/w DB and H/w
+
+Indexes=> finding your docs faster
+
+
+
+Storage Engine:
+===============
+
+how data is written to disk
+
+how data is deleted/read from disk
+
+data structures used to store data.
+
+
+MMAPV1 => Maps DB files to virtual memory allowing OS to do all the work.
+Wired Tiger => 
+
+
+MMAPV1:
+=======
+
+	makes use of mmap system call to map disk files to memory
+	If not in memory a page pault occurs
+	fsync propogates it back to disk
+
+	defaultStorage engine in MongoDB 3.0
+
+	--storageEngine mmapv1
+
+	Features:
+
+	Collection level locking
+	Locking is shared resources.
+	Multiple Readers single writers lock
+
+	Locks:
+	=====
+	Shared Resources
+	Data
+	Metadata
+	Indexes
+	Journal -write ahead log => to ensure consistency.
+
+	Data on Disk are BSON
+
+	Bits are mapped from disk to virtual memory.
+
+
+	Documents and Data Files in MMAPV1:
+	===================================
+
+	local db is used in replication
+	local.ns => contains metadata
+	local.0 => 64 MB
+
+	Power of 2 sized allocations.
+
+	32=>64=>128=256=>
+
+Wired Tiger:
+============
+
+	New in MongoDB 3.0
+	First pluggable SE
+	Document Level Locking
+	Compression
+	Lacks some pitfalls of MMAPV1
+	Performance gains
+
+
+	Built separately from MongoDB
+	Open Source
+	USed by Other DB's
+
+
+
+	mongod --storageEngine wiredTiger --logPath /data/mongo.log --fork
+
+	use local
+	startup_log => wiredTiger
+
+
+	WT Internals:
+	=============
+
+	Stores files as B Trees
+	Writes new version of docs while updation
+	Two Caches => WT cache(1/2 RAM)/ FS Cache
+
+	WT Cache => FS Cache => DISK
+
+	Every checkpoint occurs in 60 secs
+	Each checkpoint is a consistent snapshot of the data
+	No need for Journaling for wired Tiger.
+	Writes should scale with the no of threads
+
+
+	Compression:
+	============
+
+	Snappy => fast(more speed)
+	zlib => more compression less speed
+	none
+
+	Recap:
+	=====
+
+	* New pluggable storage engine for 3.0
+	* Document level locking
+	* compression of docs and indexes
+	* Improved performance
+
+
+	
+
+
+
+
+
+
