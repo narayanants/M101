@@ -9,7 +9,7 @@
 *   Write Concern Scenarios:
 *   ========================
 *
-*   Write is truly ocmmited upon majority of the set.
+*   Write is truly committed upon majority of the set.
 *
 *   we can get acknowledgement of this.
 *
