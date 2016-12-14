@@ -3,7 +3,7 @@
  */
 
 /*
-*   Rconfig a Replset:
+*   Reconfig a Replset:
 *   =================
 *
 *   rs.reconfig()
