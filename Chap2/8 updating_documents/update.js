@@ -8,7 +8,7 @@ db.movieDetails.updateOne({title: "The Martian"},
 db.movieDetails.updateOne({title:"The Martian"},{$inc:{"tomato.reviews":3,"tomato.userReviews":25}})
 
 db.movieDetails.updateOne({title:"The Martian"},{$push:{reviews:{$each:[
-										{ rating: 0.5,
+										                    { rating: 0.5,
                                           date: ISODate("2016-01-12T07:00:00Z"),
                                           reviewer: "Yabo A.",
                                           text: "i believe its ranked high due to its slogan 'Bring him Home' there is nothing in the movie, nothing at all ! Story telling for fiction story !"},
