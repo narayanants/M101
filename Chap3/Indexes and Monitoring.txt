@@ -25,7 +25,7 @@ MMAPV1:
 =======
 
 	makes use of mmap system call to map disk files to memory
-	If not in memory a page pault occurs
+	If not in memory a page fault occurs
 	fsync propogates it back to disk
 
 	defaultStorage engine in MongoDB 3.0
