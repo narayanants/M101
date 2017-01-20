@@ -16,13 +16,11 @@ db.movieDetails.find({ boxOffice: {$elemMatch: { country: "UK", revenue: { $gt: 
 
 //Array Operators
 
-db.movieDetails.find({genres:{$all:["Comedy","Crime","Drama"]}});
+db.movieDetails.find({genres:{$all:['Comedy',"Crime","Drama"]}}).count()
 
-db.movieDetails.find({countries:{$size:1}})
+db.movieDetails.find({countries:{$size:1}}).count()
 
-db.movieDetails.find({boxOffice:{$elemMatch:{country:"UK",revenue:{$gt:15}}}})
-
-db.movieDetails.find({genres:{$all:["Comedy","Crime","Drama"]}});
+db.movieDetails.find({boxOffice:{$elemMatch:{country:"UK",revenue:{$gt:15}}}}).count()
 
 
 
