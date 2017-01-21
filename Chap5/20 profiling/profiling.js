@@ -34,6 +34,8 @@
 
     db.setProfilingLevel(1,4)
 
+    db.system.profile.find({millis:{$gt:1}}).sort({ts:1}).pretty()
+
 
 
     
