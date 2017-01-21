@@ -17,4 +17,4 @@
 
        db.stores.find({location:{$near:[50,50]}});
 
-       
+       db.places.find({location:{$near:[74,140]}}).limit(3);
