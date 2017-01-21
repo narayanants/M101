@@ -73,7 +73,13 @@
     Write Concern Principals:
     ========================
 
-    
+    w:majority
+
+    Threshold Limits on RS:
+    ======================
+
+        rs size: 50 members
+        Voting members: 7
 
 
  */
