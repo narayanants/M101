@@ -16,3 +16,5 @@
        db.stores.ensureIndex({location:'2d',type:1});
 
        db.stores.find({location:{$near:[50,50]}});
+
+       
