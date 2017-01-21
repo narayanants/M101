@@ -3,8 +3,16 @@
  */
 
 /*
-*   Replica Set Commands:
-*   =====================
-*
-*
-* */
+   Replica Set Commands:
+   =====================
+
+   rs.conf()
+
+   db.system.replset.find().pretty()
+
+   db.isMaster()
+
+   
+
+
+*/
