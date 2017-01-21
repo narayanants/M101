@@ -15,6 +15,13 @@
 *
 *       Statement based replication.
 *       Crash Recovery Journal Files.
+*
+*        Which of the following are true?
+*           
+*       Works on commodity h/w
+*       Single Primary and multiple secondaries
+*       Works on WAN
+*       Provide Eventual consistency
 * */
 
     db.foo.remove({age:30});
