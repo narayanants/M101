@@ -27,3 +27,14 @@
 
     db.setProfilingLevel(1,4)
 
+
+    db.getProfilingLevel()
+
+    db.getProfilingStatus()
+
+    db.setProfilingLevel(1,4)
+
+
+
+    
+
