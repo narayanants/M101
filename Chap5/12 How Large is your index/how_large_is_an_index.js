@@ -22,3 +22,5 @@
 
     db.students.totalIndexSize();
 
+    db.students.totalIndexSize();
+
