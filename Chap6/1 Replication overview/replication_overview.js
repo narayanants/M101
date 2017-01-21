@@ -22,7 +22,9 @@
 *       One Primary => Multiple Secondaries
 *       Read from Primary or secondaries
 *
-*
+*       HA => Failover
+        DS => Durability
+        DR => Extra Copies
 *
 *
 *
